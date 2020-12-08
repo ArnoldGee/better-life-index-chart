@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/better-life-index-chart/static/css/main.6d7c5abe.chunk.css",
+    "main.js": "/better-life-index-chart/static/js/main.ccbcf10d.chunk.js",
+    "main.js.map": "/better-life-index-chart/static/js/main.ccbcf10d.chunk.js.map",
+    "runtime-main.js": "/better-life-index-chart/static/js/runtime-main.92105db7.js",
+    "runtime-main.js.map": "/better-life-index-chart/static/js/runtime-main.92105db7.js.map",
+    "static/js/2.72e5b146.chunk.js": "/better-life-index-chart/static/js/2.72e5b146.chunk.js",
+    "static/js/2.72e5b146.chunk.js.map": "/better-life-index-chart/static/js/2.72e5b146.chunk.js.map",
+    "index.html": "/better-life-index-chart/index.html",
+    "static/css/main.6d7c5abe.chunk.css.map": "/better-life-index-chart/static/css/main.6d7c5abe.chunk.css.map",
+    "static/js/2.72e5b146.chunk.js.LICENSE.txt": "/better-life-index-chart/static/js/2.72e5b146.chunk.js.LICENSE.txt",
+    "static/media/better_life_index_data.f16a3eb8.csv": "/better-life-index-chart/static/media/better_life_index_data.f16a3eb8.csv"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.92105db7.js",
+    "static/js/2.72e5b146.chunk.js",
+    "static/css/main.6d7c5abe.chunk.css",
+    "static/js/main.ccbcf10d.chunk.js"
+  ]
+}
