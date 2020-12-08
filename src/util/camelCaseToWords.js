@@ -1,3 +1,6 @@
+// This function converts "camelCase" strings to "Regular Case" strings
+// Example: 'lifeExpectancy' -> 'Life Expectancy'
+
 export default function camelCaseToWords(str) {
   if (str) {
     return str

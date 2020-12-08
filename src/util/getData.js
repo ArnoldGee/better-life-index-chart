@@ -1,3 +1,5 @@
+// This async function reads the CSV file and converts it into JSON
+
 import Papa from 'papaparse'
 
 import importedCsvData from '../data/better_life_index_data.csv';

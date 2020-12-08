@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import {connect} from 'react-redux';
 
 import {changeSelectedChart} from '../actions'
@@ -9,6 +9,23 @@ import './ChartSelector.css';
 const ChartSelector = ({children, chartOptions, selectedChart, changeSelectedChart}) => {
   const [open, setOpen] = useState(false);
 
+  // Thanks to these useRef and useEffect hooks, you can click outside the dropdown... and it closes!
+  const dropdownRef = useRef();
+  useEffect(() => {
+    const onBodyClick = (event) => {
+      if (dropdownRef.current && dropdownRef.current.contains(event.target)) {
+        return;
+      }
+      console.log(dropdownRef.current)
+      setOpen(false);
+    };
+    document.body.addEventListener('click', onBodyClick);
+    return () => {
+      document.body.removeEventListener('click', onBodyClick)
+    }
+  }, []);
+
+  // First, we get the chart options to display
   const displayedOptions = chartOptions.map((option) => {
     const selected = option === selectedChart
     return (
@@ -30,7 +47,7 @@ const ChartSelector = ({children, chartOptions, selectedChart, changeSelectedCha
   });
 
   return (
-    <span className="chart-selector">
+    <span ref={dropdownRef} className="chart-selector">
       <span onClick={() => setOpen(!open)}>
         <i
           className={`icon fas fa-chevron-right chart-selector__chevron ${

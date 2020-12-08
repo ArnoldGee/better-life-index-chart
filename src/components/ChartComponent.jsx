@@ -25,6 +25,7 @@ const ChartComponent = ({countryNames, dataArray, labelName}) => {
             },
           ],
         },
+        maintainAspectRatio: false
       }
 //   useEffect(() => {
 //     var ctx = document.getElementById('myChart').getContext('2d');
@@ -58,7 +59,6 @@ const ChartComponent = ({countryNames, dataArray, labelName}) => {
 
   return <HorizontalBar
   height={500}
-  options={{ maintainAspectRatio: false }}
   style={{height: `500px`}} data={data} options={options} />//<canvas id="myChart" width="400" height="400"></canvas>;
 };
 

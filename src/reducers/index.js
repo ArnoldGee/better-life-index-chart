@@ -1,6 +1,7 @@
 import {combineReducers} from 'redux'
 import types from '../types'
 
+// This reducer puts all the CSV data into a single JSON file 
 const chartDataReducer = (state = [], { type, payload }) => {
   switch (type) {
   case types.ADD_CHART_DATA:
@@ -15,6 +16,7 @@ const initialChartOptions = {
   options: []
 }
 
+// This reducer handles the selected chart. Initially it's 'lifeSatisfaction'
 const chartOptionsReducer = (state = initialChartOptions, { type, payload }) => {
   switch (type) {
   case types.ADD_CHART_DATA:

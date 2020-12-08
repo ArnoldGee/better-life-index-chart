@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;800&display=swap');
 
-@import url('https://fonts.googleapis.com/css?family=Lato');
+/*@import url('https://fonts.googleapis.com/css?family=Lato'); */
 /*
 HEADERS: font-family: 'Inter', sans-serif;
 BODY: font-family: 'Lato', sans-serif;
@@ -20,7 +20,13 @@ F75C03 - 3EA060 - FFD400 - EE6352 - 2E294E
 body {
   margin: 0;
 }
+* {
+  box-sizing: border-box;
+}
 
+a {
+  text-decoration: none;
+}
 
 /******************
  * GLOBAL CLASSES *
@@ -28,13 +34,20 @@ body {
 :root {
   --green: #3EA060;
   --yellow: #FFD400;
+  --orange: #EE6352
+}
+
+.orange {
+  color: var(--orange);
 }
 
 .header {
   font-family: 'Inter', sans-serif;
 }
 .text {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Inter', sans-serif;
+
+  /*font-family: 'Lato', sans-serif;*/
 }
 .highlighted{
   position:relative;
@@ -55,4 +68,19 @@ body {
 
 .icon {
   margin: 0 0.5rem
+}
+.only-mobile {
+  display: none;
+}
+
+/*******************************
+ * MAKING IT MOBILE RESPONSIVE *
+ *******************************/
+@media screen and (max-width: 700px){
+  :root {
+    font-size: 62.5%;
+  }
+  .only-mobile {
+    display: inherit;
+  }
 }
