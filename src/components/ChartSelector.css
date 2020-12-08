@@ -1,0 +1,37 @@
+.chart-selector {
+  position: relative;
+  font-size: 0.8em;
+  color: grey;
+  cursor: pointer;
+}
+
+.chart-selector__chevron {
+  transition: transform ease-in-out 0.3s
+}
+.chart-selector:hover .chart-selector__chevron {
+  transform: rotate(90deg)
+}
+.chart-selector__chevron--open{
+  transform: rotate(90deg)
+}
+.chart-selector__options {
+  position: absolute;
+  right: 0px;
+  background: white;
+  margin-top: 0.5rem;
+  padding: 0 0 2rem 2rem;
+}
+.chart-selector__options__option {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  text-align: right;
+  white-space: nowrap;
+  transition: color ease-in-out 0.1s
+}
+.chart-selector__options__option:hover {
+  color: #3EA060
+}
+
+.chart-selector__options__option--selected {
+  color: #3EA060
+}

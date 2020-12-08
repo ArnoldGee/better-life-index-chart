@@ -1,9 +1,15 @@
 .navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   padding: 10px;
   font-size: 1.5rem;
   font-weight: 600;
   color: grey;
+
+  text-shadow: -5px 5px 10px white,
+						  5px 5px 10px white,
+						  5px -5px 10px white,
+						 -5px -5px 10px white;
+
 }

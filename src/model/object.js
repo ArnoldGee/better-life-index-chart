@@ -1,4 +1,4 @@
-store = {
+  store = {
   chartData: [ /* Data returned from papa CSV. Aquí s'ha de mirar lo de "songs"
                   Per recuperar la informació, la lògica ja la inclourem a dins de */],
 

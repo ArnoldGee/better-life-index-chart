@@ -1,50 +1,65 @@
-import React, {useEffect} from 'react'
-import Chart from 'chart.js'
+import React from 'react';
+import {HorizontalBar} from 'react-chartjs-2';
+// import Chart from 'chart.js';
 
-const ChartComponent = ({labels, data, labelName}) => {
-  useEffect(()=> {
-    var ctx = document.getElementById('myChart').getContext('2d');
-    new Chart(ctx, {
-        type: 'horizontalBar',
-        data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-            datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-                ],
-                borderWidth: 1
-            }]
+const ChartComponent = ({countryNames, dataArray, labelName}) => {
+  const data = {
+    labels: countryNames,
+    datasets: [
+      {
+        label: labelName,
+        data: dataArray,
+        backgroundColor: '#EE6352',
+        borderColor: '#EE6352',
+        borderWidth: 1,
+      },
+    ],
+  };
+  const options = {
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                beginAtZero: true,
+              },
+            },
+          ],
         },
-        options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
-                    }
-                }]
-            }
-        }
-    });
-  })
+      }
+//   useEffect(() => {
+//     var ctx = document.getElementById('myChart').getContext('2d');
+//     new Chart(ctx, {
+//       type: 'horizontalBar',
+//       data: {
+//         labels: countryNames,
+//         datasets: [
+//           {
+//             label: labelName,
+//             data: dataArray,
+//             backgroundColor: '#EE6352',
+//             borderColor: '#EE6352',
+//             borderWidth: 1,
+//           },
+//         ],
+//       },
+//       options: {
+//         scales: {
+//           yAxes: [
+//             {
+//               ticks: {
+//                 beginAtZero: true,
+//               },
+//             },
+//           ],
+//         },
+//       },
+//     });
+//   });
 
-  return (
-    <canvas id="myChart" width="400" height="400"></canvas>
-  )
-}
+  return <HorizontalBar
+  height={500}
+  options={{ maintainAspectRatio: false }}
+  style={{height: `500px`}} data={data} options={options} />//<canvas id="myChart" width="400" height="400"></canvas>;
+};
 
-export default ChartComponent
+export default ChartComponent;

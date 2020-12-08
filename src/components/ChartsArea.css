@@ -1,0 +1,14 @@
+.charts-area {
+  margin: auto;
+  max-width: 800px;
+  padding: 1rem;
+}
+.charts-area__title {
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 4rem;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: baseline;
+}

@@ -1,15 +1,18 @@
-import React from 'react'
+import React, {useState} from 'react'
 
+import TypedText from './TypedText'
 import './Hero.css'
 
 const Hero = () => {
+  const [firstElementTyped, setFirstElementTyped] =useState(false)
   return (
     <div className="hero">
       <div className="hero__text header">
-        We know more than ever about wellbeing in the world. 
+        <TypedText text={'We know more than ever about wellbeing in the world.'} onComplete={() => setFirstElementTyped(true)}/>
       </div>
       <div className="hero__title header">
-        What are we <span className="highlighted">doing</span> about it?
+        <TypedText text={firstElementTyped&&'What are we <span class="highlighted">doing</span> about it?'}/>
+        
       </div>
     </div>
   )
